@@ -18,6 +18,7 @@ const App = () => {
   useEffect(() => {
     fetchAPI()
       .then((data) => {
+        console.log(data, "in first then")
         return data
       })
       .then((data) => {

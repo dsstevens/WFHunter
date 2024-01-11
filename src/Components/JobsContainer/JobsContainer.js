@@ -4,8 +4,8 @@ import { Link } from "react-router-dom"
 const JobsContainer = ({jobs}) => {
   console.log(jobs, "this is jobs in jobscontainer", jobs[0])
 
-  const displayJobsArray = (jobs) => {
-   return jobs.map((job) => { 
+  const displayJobsArray = () => {
+   return (jobs.map((job) => { 
       return (
         <Link to={job.id}>
           <h2>{job.Title}</h2>
@@ -13,7 +13,7 @@ const JobsContainer = ({jobs}) => {
         </Link>
       )
     })
-  }
+  )}
 
   return(
    <>{displayJobsArray()}</>

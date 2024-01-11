@@ -1,18 +1,15 @@
 import './Home.css'
 import JobsContainer from '../JobsContainer/JobsContainer'
-import { useEffect, useState } from 'react'
-import fetchAPI from '../../ApiCalls'
 
 
-const Home = () => {
-  const [job, setJobs] = useState([])
 
-
+const Home = ({ jobs }) => {
+console.log(jobs, "jobs in home")
   return (
     <main className="Home">
       <h2>Newest remote job postings</h2>
       <section className='main-overlay'>
-        <JobsContainer></JobsContainer>
+        <JobsContainer jobs={ jobs }></JobsContainer>
       </section>
     </main>
   )

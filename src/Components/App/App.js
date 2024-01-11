@@ -29,16 +29,16 @@ const App = () => {
   }, [])
 
   return (
-    <main className='App'>
+    <div className='App'>
       <Header isHomePage={isHomePage}>
         {isHomePage ? null : <HomeButton />}
       </Header>
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home jobs={ jobs }/> } />
         <Route path='/:favorites' element={<Faves />} />
         <Route path='/:details/:job_id' element={<JobDetails />} />
       </Routes>
-    </main>
+    </div>
     
   );
 }

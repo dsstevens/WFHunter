@@ -1,8 +1,17 @@
-const Home = () => {
+import './Home.css'
+import JobsContainer from '../JobsContainer/JobsContainer'
+
+
+
+const Home = ({ jobs }) => {
+console.log(jobs, "jobs in home")
   return (
-    <div className="Home">
-      <h1>WFHunter</h1>
-    </div>
+    <main className="Home">
+      <h2>Newest remote job postings</h2>
+      <section className='main-overlay'>
+        <JobsContainer jobs={ jobs }></JobsContainer>
+      </section>
+    </main>
   )
 }
 

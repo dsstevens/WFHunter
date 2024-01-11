@@ -1,7 +1,9 @@
 const Home = () => {
   return (
     <div className="Home">
-      <h1>WFH<span style="font-style:italic">unter</span></h1>
+      <h1>WFHunter</h1>
     </div>
   )
 }
+
+export default Home

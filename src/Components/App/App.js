@@ -3,10 +3,11 @@ import './App.css';
 import Header from '../Header/Header'
 import HomeButton from '../HomeButton/HomeButton'
 import Home from '../Home/Home'
+import Faves from '../Faves/Faves'
+import JobDetails from '../JobDetails/JobDetails'
 
 
-
-function App() {
+const App = () => {
   const location = useLocation()
   const isHomePage = location.pathname === '/'
 
@@ -18,6 +19,8 @@ function App() {
       </Header>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/:favorites' element={<Faves />} />
+        <Route path='/:details' element={<JobDetails />} />
       </Routes>
     </main>
     

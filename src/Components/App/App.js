@@ -13,12 +13,12 @@ import { useState, useEffect } from 'react';
 const App = () => {
   const location = useLocation()
   const isHomePage = location.pathname === '/'
-  const [jobs, setJobs] = useState({})
+  const [jobs, setJobs] = useState([])
  
   useEffect(() => {
     fetchAPI()
       .then((data) => {
-        console.log(data, "in first then")
+        // console.log(data, "in first then")
         return data
       })
       .then((data) => {
@@ -37,7 +37,7 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home jobs={ jobs }/> } />
         <Route path='/:favorites' element={<Faves />} />
-        <Route path='/:details/:job_id' element={<JobDetails />} />
+        <Route path='/details/:jobId' element={<JobDetails jobs={ jobs } />} />
       </Routes>
     </div>
     

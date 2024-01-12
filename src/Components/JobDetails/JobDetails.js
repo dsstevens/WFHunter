@@ -1,5 +1,5 @@
 const JobDetails = () => {
-
+   console.log("wassup")
 }
 
 export default JobDetails

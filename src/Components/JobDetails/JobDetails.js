@@ -21,10 +21,10 @@ const JobDetails = ({ jobs }) => {
         <p>Location: {job.jobGeo}</p>
         <div className="job-category">
         <p>Job Category:<span>&nbsp;</span></p>
-        <div dangerouslySetInnerHTML={{ __html: job.jobCategory}}></div>
+        <p dangerouslySetInnerHTML={{ __html: job.jobCategory}}></p>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: job.jobDescription }}></div>
-        <p>{job.jobExcerpt}</p>
+        <p dangerouslySetInnerHTML={{ __html: job.jobDescription }}></p>
+        <p dangerouslySetInnerHTML={{__html: job.jobExcerpt}}></p>
         <p>Job posted: {moment(job.pubDate).format('MMMM Do, YYYY')}</p>
       </div>
       

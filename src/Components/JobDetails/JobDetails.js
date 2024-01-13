@@ -2,7 +2,7 @@ import './JobDetails.css'
 import moment from 'moment'
 import { useParams } from 'react-router-dom'
 
-const JobDetails = ({ jobs }) => {
+const JobDetails = ({ jobs, toggleFavorite, favorites }) => {
    const { jobId } = useParams()
    const job = jobs.find(element => element.id.toString() === jobId)
    
@@ -12,20 +12,25 @@ const JobDetails = ({ jobs }) => {
       return <div>Job not found or still loading...</div>;
    }
 
+   const isFavorited = favorites.includes(job.id)
+
    return (
-      <div key={job.index}>
-        <p>Company: {job.companyName}</p>
-        <p>Job Title: {job.jobTitle}</p>
-        <p>Level: {job.jobLevel}</p>
-        <p>Job Type: {job.jobType}</p>
-        <p>Location: {job.jobGeo}</p>
+      <div key={job.index} className='job-details'>
+      <div className='button-box'>
+         <button className="fave-button" onClick={() => toggleFavorite(job.id) } >{isFavorited ? 'Remove from Favorites' : '✨Add to Favorites✨'}</button>
+      </div>
+         <p>Company: {job.companyName}</p>
+         <p>Job Title: {job.jobTitle}</p>
+         <p>Level: {job.jobLevel}</p>
+         <p>Job Type: {job.jobType}</p>
+         <p>Location: {job.jobGeo}</p>
         <div className="job-category">
-        <p>Job Category:<span>&nbsp;</span></p>
-        <p dangerouslySetInnerHTML={{ __html: job.jobCategory}}></p>
+         <p>Job Category:<span>&nbsp;</span></p>
+         <p dangerouslySetInnerHTML={{ __html: job.jobCategory}}></p>
         </div>
-        <p dangerouslySetInnerHTML={{ __html: job.jobDescription }}></p>
-        <p dangerouslySetInnerHTML={{__html: job.jobExcerpt}}></p>
-        <p>Job posted: {moment(job.pubDate).format('MMMM Do, YYYY')}</p>
+         <p dangerouslySetInnerHTML={{ __html: job.jobDescription }}></p>
+         <p dangerouslySetInnerHTML={{__html: job.jobExcerpt}}></p>
+         <p>Job posted: {moment(job.pubDate).format('MMMM Do, YYYY')}</p>
       </div>
       
     );

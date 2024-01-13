@@ -6,11 +6,11 @@ const Header = () => {
 
 
   return (
-    <div>
+    <nav>
       <HomeButton></HomeButton>
       <h1>WFHunter</h1>
       <FavesButton></FavesButton>
-    </div>
+    </nav>
   )
 }
 

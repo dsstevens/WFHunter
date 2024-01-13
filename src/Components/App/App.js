@@ -31,8 +31,8 @@ const App = () => {
 
   return (
     <div className='App'>
-      <Header isHomePage={isHomePage}>
-        {isHomePage ? null : <HomeButton />}
+      <Header>
+        <HomeButton />
       </Header>
       <Routes>
         <Route path='/' element={<Home jobs={ jobs }/> } />

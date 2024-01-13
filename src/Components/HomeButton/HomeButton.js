@@ -9,7 +9,6 @@ const HomeButton = () => {
   return(
     <>
       {isHomePage ? null : <Link className="header-button" to="/">Home</Link>}
-      {/* <button>Home</button> */}
     </>
    
   )

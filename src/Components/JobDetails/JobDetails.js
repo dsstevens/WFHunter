@@ -2,7 +2,7 @@ import './JobDetails.css'
 import moment from 'moment'
 import { useParams } from 'react-router-dom'
 
-const JobDetails = ({ jobs }) => {
+const JobDetails = ({ jobs, toggleFavorite, favorites }) => {
    const { jobId } = useParams()
    const job = jobs.find(element => element.id.toString() === jobId)
    
@@ -12,10 +12,12 @@ const JobDetails = ({ jobs }) => {
       return <div>Job not found or still loading...</div>;
    }
 
+   const isFavorited = favorites.includes(job.id)
+
    return (
       <div key={job.index} className='job-details'>
       <div className='button-box'>
-         <button className="fave-button">✨Add to Favorites✨</button>
+         <button className="fave-button" onClick={() => toggleFavorite(job.id) } >{isFavorited ? 'Remove from Favorites' : '✨Add to Favorites✨'}</button>
       </div>
          <p>Company: {job.companyName}</p>
          <p>Job Title: {job.jobTitle}</p>

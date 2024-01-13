@@ -1,8 +1,12 @@
 nav {
   display: flex;
   justify-content: space-between;
+  background-color:#7F7876;
 }
-
+h1 {
+  font-size: 3em;
+  color: white
+}
 button {
   align-items: center;
   appearance: none;
@@ -32,6 +36,7 @@ button {
   white-space: nowrap;
   will-change: box-shadow,transform;
   font-size: 18px;
+  margin: 1.5em
 }
 
 button:focus {

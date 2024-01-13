@@ -4,7 +4,7 @@ const FavesButton = () => {
 
 
   return (
-    <div></div>
+    <button>Favorites</button>
   )
 }
 

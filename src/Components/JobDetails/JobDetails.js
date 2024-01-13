@@ -1,12 +1,13 @@
 import './JobDetails.css'
 import moment from 'moment'
 import { useParams } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 const JobDetails = ({ jobs, toggleFavorite, favorites }) => {
    const { jobId } = useParams()
    const job = jobs.find(element => element.id.toString() === jobId)
    
-   console.log(job, "this is job")
+   console.log(jobs, "this is jobs in job details")
 
    if (!job) {
       return <div>Job not found or still loading...</div>;
@@ -35,5 +36,27 @@ const JobDetails = ({ jobs, toggleFavorite, favorites }) => {
       
     );
 }
+
+JobDetails.propTypes = {
+   jobs: PropTypes.arrayOf(PropTypes.shape({
+     annualSalaryMax: PropTypes.string,
+     annualSalaryMin: PropTypes.string,
+     companyLogo: PropTypes.string.isRequired,
+     companyName: PropTypes.string.isRequired,
+     id: PropTypes.number.isRequired,
+     jobDescription: PropTypes.string.isRequired,
+     jobExcerpt: PropTypes.string.isRequired,
+     jobGeo: PropTypes.string.isRequired,
+     jobIndustry: PropTypes.arrayOf(PropTypes.string).isRequired,
+     jobLevel: PropTypes.string.isRequired,
+     jobTitle: PropTypes.string.isRequired,
+     jobType: PropTypes.arrayOf(PropTypes.string).isRequired,
+     pubDate: PropTypes.string.isRequired,
+     salaryCurrency: PropTypes.string,
+     url: PropTypes.string.isRequired
+   })).isRequired,
+   toggleFavorite: PropTypes.func.isRequired,
+   favorites: PropTypes.arrayOf(PropTypes.number).isRequired,
+  };
 
 export default JobDetails

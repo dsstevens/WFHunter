@@ -8,7 +8,7 @@ const JobsContainer = ({ jobs }) => {
   const displayJobsArray = () => {
    return (jobs.map((job) => { 
       return (
-        <Link to={`/details/${job.id}`}>
+        <Link to={`/details/${job.id}`} key={job.id}>
           <h2>{job.jobTitle}</h2>
           <h3>{moment(job.pubDate).format('MMMM Do, YYYY')}</h3>
           <h3>{job.companyName}</h3>

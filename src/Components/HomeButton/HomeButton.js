@@ -1,11 +1,16 @@
 import Home from '../Home/Home'
 import './HomeButton.css'
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 const HomeButton = () => {
+  const location = useLocation()
+  const isHomePage = location.pathname === '/'
 
   return(
-   <button>Home</button>
+    <>
+      {isHomePage ? null : <Link className="header-button" to="/">Home</Link>}
+    </>
+   
   )
 }
 

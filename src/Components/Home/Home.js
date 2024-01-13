@@ -17,8 +17,8 @@ console.log(jobs, "jobs in home")
 
 Home.propTypes = {
   jobs: PropTypes.arrayOf(PropTypes.shape({
-    annualSalaryMax: PropTypes.string.isRequired,
-    annualSalaryMin: PropTypes.string.isRequired,
+    annualSalaryMax: PropTypes.string,
+    annualSalaryMin: PropTypes.string,
     companyLogo: PropTypes.string.isRequired,
     companyName: PropTypes.string.isRequired,
     id: PropTypes.number.isRequired,
@@ -30,7 +30,7 @@ Home.propTypes = {
     jobTitle: PropTypes.string.isRequired,
     jobType: PropTypes.arrayOf(PropTypes.string).isRequired,
     pubDate: PropTypes.string.isRequired,
-    salaryCurrency: PropTypes.string.isRequired,
+    salaryCurrency: PropTypes.string,
     url: PropTypes.string.isRequired
   })).isRequired
  };

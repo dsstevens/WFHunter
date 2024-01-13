@@ -14,15 +14,18 @@ const JobDetails = ({ jobs }) => {
 
    return (
       <div key={job.index}>
-        <p>{job.companyName}</p>
-        <div dangerouslySetInnerHTML={{ __html: job.jobCategory}}></div>
-        <div dangerouslySetInnerHTML={{ __html: job.jobDescription }}></div>
-        <p>{job.jobExcerpt}</p>
-        <p>{job.jobGeo}</p>
-        <p>{job.jobLevel}</p>
-        <p>{job.jobTitle}</p>
-        <p>{job.jobType}</p>
-        <p>{moment(job.pubDate).format('MMMM Do, YYYY')}</p>
+        <p>Company: {job.companyName}</p>
+        <p>Job Title: {job.jobTitle}</p>
+        <p>Level: {job.jobLevel}</p>
+        <p>Job Type: {job.jobType}</p>
+        <p>Location: {job.jobGeo}</p>
+        <div className="job-category">
+        <p>Job Category:<span>&nbsp;</span></p>
+        <p dangerouslySetInnerHTML={{ __html: job.jobCategory}}></p>
+        </div>
+        <p dangerouslySetInnerHTML={{ __html: job.jobDescription }}></p>
+        <p dangerouslySetInnerHTML={{__html: job.jobExcerpt}}></p>
+        <p>Job posted: {moment(job.pubDate).format('MMMM Do, YYYY')}</p>
       </div>
       
     );

@@ -7,7 +7,7 @@ const Home = ({ jobs }) => {
 console.log(jobs, "jobs in home")
   return (
     <main className="Home">
-      <h2>Newest remote job postings</h2>
+      <h2 className='home-title'>Newest remote job postings</h2>
       <section className='main-overlay'>
         <JobsContainer jobs={ jobs }></JobsContainer>
       </section>

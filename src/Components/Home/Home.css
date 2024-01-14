@@ -2,6 +2,18 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+main::before {
+  width: 100%;
+  height: calc(100dvh - 231px);
+  background-image: url('/Users/deannastevens/Desktop/mod_3/WFHunter/WFHunter/public/shutterstock_1077476951.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  content: "";
+  z-index: -1;
+  position: absolute;
 }
 
 .home-title {

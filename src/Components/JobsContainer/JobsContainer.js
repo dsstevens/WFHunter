@@ -13,7 +13,7 @@ const JobsContainer = ({ jobs }) => {
         <Link to={`/details/${job.id}`} key={job.id}>
           <h2>{job.jobTitle}</h2>
           <h3>{moment(job.pubDate).format('MMMM Do, YYYY')}</h3>
-          <h3>{job.companyName}</h3>
+          <h3 className='company-name'>{job.companyName}</h3>
         </Link>
       )
     })

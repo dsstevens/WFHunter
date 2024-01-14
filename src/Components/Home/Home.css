@@ -5,6 +5,7 @@ main {
   position: relative;
   width: 100%;
   max-width: 100%;
+  align-items: center;
 }
 
 main::before {
@@ -16,7 +17,7 @@ main::before {
   content: "";
   z-index: -1;
   position: absolute;
-  
+  align-items: center;
 }
 
 .home-title {
@@ -28,6 +29,22 @@ main::before {
   color:#FCFCFD;
   font-family: 'Philosopher', sans-serif;
   background-color: rgba(47, 70, 5, 0.7);
-  border-radius: 4px;
+  border-radius: 25px;
   text-align: center;
+}
+
+.main-overlay {
+  width: 75%;
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  background-color: rgba(96, 107, 65, 0.7);
+  border-radius: 25px;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+h2 {
+
 }

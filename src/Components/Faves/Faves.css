@@ -47,9 +47,33 @@ body {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
-    
 }
 
 /* LARGE BREAKPOINT */
 @media screen and (min-width: 1025px) {
+  .fave-title {
+    font-size: large;
+    font-style: italic;
+    font-size: 1.9em;
+    color:#deb38f;
+    font-family: 'Philosopher', sans-serif;
+    background-color: rgba(47, 65, 5, 0.7);
+    border-radius: 25px;
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 2%
+  }
+
+  .faves-section {
+    background-color: rgb(144, 157, 108);
+    padding: 3%;
+    height: 100%;
+    width: 100;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
 }

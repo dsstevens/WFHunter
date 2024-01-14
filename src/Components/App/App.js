@@ -31,7 +31,7 @@ const App = () => {
 
   const toggleFavorite = (jobId) => {
     const isFavorited = favorites.some((favJobId) => favJobId === jobId);
-
+  
     if (isFavorited) {
       setFavorites(favorites.filter((favJobId) => favJobId !== jobId));
     } else {

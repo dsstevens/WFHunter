@@ -1,24 +1,34 @@
 nav {
   display: flex;
-  justify-content: space-between;
-  background-color:#7F7876;
+  flex-direction: column;
+  background: linear-gradient(to bottom, #FCFCFD , #7F7876);
+  width: 100vw;
+  max-width: 100vw;
+  box-sizing: border-box;
+  align-items: center
 }
+
+
 h1 {
-  font-size: 3em;
-  color: white
+  font-size: 2.3em;
+  color: rgb(43, 35, 35); 
+  text-align: center;
+  margin: 3%;
+  font-family: 'Philosopher', sans-serif;
+
 }
 .header-button {
   align-items: center;
-  background-color: #FCFCFD;
+  background-color: #deb38f;
   border-radius: 4px;
   border-width: 0;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#917258 0 -3px 0 inset;
   box-sizing: border-box;
-  color: #36395A;
+  color: #292a30;
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono",monospace;
-  height: 48px;
+  height: 40px;
   justify-content: center;
   line-height: 1;
   padding-left: 16px;
@@ -32,22 +42,165 @@ h1 {
   touch-action: manipulation;
   white-space: nowrap;
   will-change: box-shadow,transform;
-  font-size: 18px;
-  margin: 1.5em;
+  font-size: 12px;
+  margin: 3%;
+  margin-top: 0;
   width: 20%;
   min-width: fit-content;
 }
 
 .header-button:focus {
-  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  box-shadow: #917258 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #917258 0 -3px 0 inset;
 }
 
 .header-button:hover {
-  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #917258 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
 .header-button:active {
-  box-shadow: #D6D6E7 0 3px 7px inset;
+  box-shadow: #917258 0 3px 7px inset;
   transform: translateY(2px);
+}
+
+/* MEDIUM BREAKPOINT */
+@media screen and (min-width: 750px) and (max-width: 1024px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to bottom, #FCFCFD , #7F7876);
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  h1 {
+    font-size: 3em;
+    color: rgb(43, 35, 35); 
+    text-align: center;
+    margin: 3%;
+    font-family: 'Philosopher', sans-serif;
+  
+  }
+  .header-button {
+    align-items: center;
+    background-color: #deb38f;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#917258 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #292a30;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 40px;
+    justify-content: center;
+    line-height: 1;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 16px;
+    margin-top: 0;
+    width: 20%;
+    margin-top: 4%; 
+  }
+  
+  .header-button:focus {
+    box-shadow: #917258 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #917258 0 -3px 0 inset;
+  }
+  
+  .header-button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #917258 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .header-button:active {
+    box-shadow: #917258 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  
+}
+
+/* LARGE BREAKPOINT */
+@media screen and (min-width: 1025px) {
+  nav {
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to bottom, #FCFCFD , #7F7876);
+    width: 100vw;
+    max-width: 100vw;
+    box-sizing: border-box;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+    height: 10vh
+  }
+  
+  
+  h1 {
+    font-size: 3em;
+    color: rgb(43, 35, 35); 
+    text-align: center;
+    margin: 3%;
+    font-family: 'Philosopher', sans-serif;
+  
+  }
+  .header-button {
+    align-items: center;
+    background-color: #deb38f;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#917258 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #292a30;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 40px;
+    justify-content: center;
+    line-height: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+    margin: 3%;
+    margin-top: 0;
+    width: 12%;
+    min-width: fit-content;
+    margin-top: 3%;
+  }
+  
+  .header-button:focus {
+    box-shadow: #917258 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #917258 0 -3px 0 inset;
+  }
+  
+  .header-button:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #917258 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .header-button:active {
+    box-shadow: #917258 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+  
 }

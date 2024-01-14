@@ -1,13 +1,16 @@
 import JobsContainer from "../JobsContainer/JobsContainer"
 import PropTypes from 'prop-types'
+import './Faves.css'
 
 const Faves = ({ jobs, favorites }) => {
   const favoriteJobs = jobs.filter((job) => favorites.includes(job.id))
 
   return (
     <div>
-      <h2>Your Favorite Job Postings</h2>
-      <JobsContainer jobs={favoriteJobs} />
+        <h2 className="fave-title">Your Favorite Job Postings:</h2>
+        <section className="faves-section">
+          <JobsContainer jobs={favoriteJobs} />
+        </section>
     </div>
   )
 }

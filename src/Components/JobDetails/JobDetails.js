@@ -16,24 +16,25 @@ const JobDetails = ({ jobs, toggleFavorite, favorites }) => {
    const isFavorited = favorites.includes(job.id)
 
    return (
-      <div key={job.index} className='job-details'>
-      <div className='button-box'>
-         <button className="fave-button" onClick={() => toggleFavorite(job.id) } >{isFavorited ? 'Remove from Favorites' : '✨Add to Favorites✨'}</button>
-      </div>
-         <p>Company: {job.companyName}</p>
-         <p>Job Title: {job.jobTitle}</p>
-         <p>Level: {job.jobLevel}</p>
-         <p>Job Type: {job.jobType}</p>
-         <p>Location: {job.jobGeo}</p>
-        <div className="job-category">
-         <p>Job Category:<span>&nbsp;</span></p>
-         <p dangerouslySetInnerHTML={{ __html: job.jobCategory}}></p>
-        </div>
-         <p dangerouslySetInnerHTML={{ __html: job.jobDescription }}></p>
-         <p dangerouslySetInnerHTML={{__html: job.jobExcerpt}}></p>
-         <p>Job posted: {moment(job.pubDate).format('MMMM Do, YYYY')}</p>
-      </div>
-      
+      <section className='job-detail-container'>
+         <div key={job.index} className='job-details'>
+         <div className='button-box'>
+            <button className="fave-button" onClick={() => toggleFavorite(job.id) } >{isFavorited ? 'Remove from Favorites' : '✨Add to Favorites✨'}</button>
+         </div>
+            <p>Company: {job.companyName}</p>
+            <p>Job Title: {job.jobTitle}</p>
+            <p>Level: {job.jobLevel}</p>
+            <p>Job Type: {job.jobType}</p>
+            <p>Location: {job.jobGeo}</p>
+         <div className="job-category">
+            <p>Job Category:<span>&nbsp;</span></p>
+            <p dangerouslySetInnerHTML={{ __html: job.jobCategory}}></p>
+         </div>
+            <p dangerouslySetInnerHTML={{ __html: job.jobDescription }}></p>
+            <p dangerouslySetInnerHTML={{__html: job.jobExcerpt}}></p>
+            <p>Job posted: {moment(job.pubDate).format('MMMM Do, YYYY')}</p>
+         </div>
+      </section>
     );
 }
 

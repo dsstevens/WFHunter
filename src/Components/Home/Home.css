@@ -1,12 +1,14 @@
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   position: relative;
+  width: 100%;
+  max-width: 100%;
 }
 
 main::before {
-  width: 100%;
+  width: 100vw;
   height: calc(100dvh - 231px);
   background-image: url('/Users/deannastevens/Desktop/mod_3/WFHunter/WFHunter/public/shutterstock_1077476951.jpg');
   background-size: cover;
@@ -14,9 +16,18 @@ main::before {
   content: "";
   z-index: -1;
   position: absolute;
+  
 }
 
 .home-title {
   font-style: italic;
-  font-size: 2em;
+  font-size: 1.5em;
+  text-indent: ;
+  margin: 3%;
+  max-width: 100%;
+  color:#FCFCFD;
+  font-family: 'Philosopher', sans-serif;
+  background-color: rgba(47, 70, 5, 0.7);
+  border-radius: 4px;
+  text-align: center;
 }

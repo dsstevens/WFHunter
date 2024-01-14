@@ -1,8 +1,8 @@
 a {
-  color: inherit; /* blue colors for links too */
-  text-decoration: inherit; /* no underline */
+  color: inherit; 
+  text-decoration: inherit; 
 }
 
 a:hover {
-  color: #7f7876
+  color: #f1f0ea
 }

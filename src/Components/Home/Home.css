@@ -46,5 +46,12 @@ main::before {
 }
 
 h2 {
+  margin: 2%;
+  margin-top: 7%;
+  font-size: large;
+}
 
+h3 {
+  margin: 2%;
+  font-size: small;
 }

@@ -31,7 +31,6 @@ const JobDetails = ({ jobs, toggleFavorite, favorites }) => {
             <p dangerouslySetInnerHTML={{ __html: job.jobCategory}}></p>
          </div>
             <p dangerouslySetInnerHTML={{ __html: job.jobDescription }}></p>
-            <p dangerouslySetInnerHTML={{__html: job.jobExcerpt}}></p>
             <p>Job posted: {moment(job.pubDate).format('MMMM Do, YYYY')}</p>
          </div>
       </section>

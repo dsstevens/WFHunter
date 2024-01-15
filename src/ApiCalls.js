@@ -10,7 +10,6 @@ const fetchAPI = () => {
           throw new Error("Error: Unable to fulfill request");
         }
       }
-      console.log(response, "in api calls")
       return response.json();
     })
 };

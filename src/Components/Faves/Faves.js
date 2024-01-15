@@ -7,7 +7,7 @@ const Faves = ({ jobs, favorites }) => {
 
   return (
     <div>
-        <h2 className="fave-title">Your Favorite Job Postings:</h2>
+        <h2 className="fave-title">Your favorite job postings:</h2>
         <section className="faves-section">
           <JobsContainer jobs={favoriteJobs} />
         </section>

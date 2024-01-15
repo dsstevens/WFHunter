@@ -7,8 +7,6 @@ const JobDetails = ({ jobs, toggleFavorite, favorites }) => {
    const { jobId } = useParams()
    const job = jobs.find(element => element.id.toString() === jobId)
    
-   console.log(jobs, "this is jobs in job details")
-
    if (!job) {
       return <div>Job not found or still loading...</div>;
    }
@@ -26,12 +24,7 @@ const JobDetails = ({ jobs, toggleFavorite, favorites }) => {
             <p>Level: {job.jobLevel}</p>
             <p>Job Type: {job.jobType}</p>
             <p>Location: {job.jobGeo}</p>
-         <div className="job-category">
-            <p>Job Category:<span>&nbsp;</span></p>
-            <p dangerouslySetInnerHTML={{ __html: job.jobCategory}}></p>
-         </div>
             <p dangerouslySetInnerHTML={{ __html: job.jobDescription }}></p>
-            <p dangerouslySetInnerHTML={{__html: job.jobExcerpt}}></p>
             <p>Job posted: {moment(job.pubDate).format('MMMM Do, YYYY')}</p>
          </div>
       </section>

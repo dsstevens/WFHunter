@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import Header from '../Header/Header'
 import HomeButton from '../HomeButton/HomeButton'
@@ -11,8 +11,6 @@ import { useState, useEffect } from 'react';
 
 
 const App = () => {
-  const location = useLocation()
-  const isHomePage = location.pathname === '/'
   const [jobs, setJobs] = useState([])
   const [favorites, setFavorites] = useState([])
  
@@ -31,7 +29,7 @@ const App = () => {
 
   const toggleFavorite = (jobId) => {
     const isFavorited = favorites.some((favJobId) => favJobId === jobId);
-
+  
     if (isFavorited) {
       setFavorites(favorites.filter((favJobId) => favJobId !== jobId));
     } else {
@@ -48,7 +46,7 @@ const App = () => {
         <Route path='/' element={<Home jobs={ jobs }/> } />
         <Route path='/favorites' element={<Faves jobs={jobs} favorites={favorites}/>} />
         <Route path='/details/:jobId' element={<JobDetails jobs={ jobs } toggleFavorite={toggleFavorite} favorites={favorites} />} />
-      <Route path='*' element={<ErrorPage />} />
+      <Route path='*' element={<ErrorPage error={{ message:'Oops! An error occurred. Please try again :(' }} />} />
       </Routes>
     </div>
   );

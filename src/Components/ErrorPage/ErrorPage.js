@@ -1,4 +1,5 @@
 import './ErrorPage.css'
+import PropTypes from 'prop-types'
 
 const ErrorPage = ({error}) => {
   const errorMessage =
@@ -9,5 +10,11 @@ const ErrorPage = ({error}) => {
     </div>
   )
 }
+
+ErrorPage.propTypes = {
+  error: PropTypes.shape({
+    message: PropTypes.string.isRequired,
+  }).isRequired,
+};
 
 export default ErrorPage

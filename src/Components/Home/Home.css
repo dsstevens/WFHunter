@@ -89,7 +89,7 @@ h3 {
     height: 100vh;
     position: absolute;
     /* height: calc(100dvh - 200px); */
-    background-image: url('/Users/deannastevens/Desktop/mod_3/WFHunter/WFHunter/public/shutterstock_1077476951.jpg');
+    background-image: url('/public/shutterstock_1077476951.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     /* transform: scaleX(-1); */

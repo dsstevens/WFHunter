@@ -2,7 +2,6 @@ import './Home.css'
 import JobsContainer from '../JobsContainer/JobsContainer'
 import PropTypes from 'prop-types'
 
-
 const Home = ({ jobs }) => {
 console.log(jobs, "jobs in home")
   return (
@@ -35,5 +34,4 @@ Home.propTypes = {
   })).isRequired
  };
  
-
 export default Home

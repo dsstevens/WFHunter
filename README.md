@@ -1,6 +1,6 @@
 # WFHunter
 
-<!-- ![Deployed Site]() -->
+[WFHunter](https://workfromhunter.vercel.app/)
 
 ## :computer: Tech Stack
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -25,7 +25,12 @@ Work From Home Hunter (WFHunter) was designed with a career in mind. Using React
  1 week sprint, designed and engineered as a final solo project in mod 4 of Turing.
 
 ## :eyes: Preview
-<!--  ![MixTape](https://github.com/) -->
+![wfhunter](https://github.com/dsstevens/WFHunter/assets/132790719/632d40d1-0733-4bf9-acbd-85c6371b5f4c)
+
+<img width="713" alt="Screenshot 2024-01-14 at 11 32 01 PM" src="https://github.com/dsstevens/WFHunter/assets/132790719/b1839bf7-14a9-460b-9b53-5b1048a05796">
+
+![Screenshot 2024-01-14 at 11 34 59 PM](https://github.com/dsstevens/WFHunter/assets/132790719/f896dd66-1b11-43c8-961e-a5b07310754c)
+![Screenshot 2024-01-15 at 12 02 26 AM](https://github.com/dsstevens/WFHunter/assets/132790719/42b67587-4385-428c-9f5a-60e2c552bf8c)
 
 ## :floppy_disk: Installation Instructions
 1. Clone this client repository to your local machine

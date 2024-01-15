@@ -3,7 +3,7 @@ import JobsContainer from '../JobsContainer/JobsContainer'
 import PropTypes from 'prop-types'
 
 const Home = ({ jobs }) => {
-console.log(jobs, "jobs in home")
+
   return (
     <main className="Home">
       <h2 className='home-title'>Newest remote job postings</h2>

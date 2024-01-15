@@ -19,22 +19,27 @@
 
 
 ## :closed_book: Abstract
-
+Work From Home Hunter (WFHunter) was designed with a career in mind. Using React, I made an app that utilizes the ![Jobicy API](https://jobicy.com/jobs-rss-feed?utm_source=apislist.com) to deliver the newest posted remote jobs listed on their site. This application utilizes React Router, PropTypes, E2E testing with Cypress and was also designed with accessibility in mind. 
 
 ## :book: Context
-
+ 1 week sprint, designed and engineered as a final solo project in mod 4 of Turing.
 
 ## :eyes: Preview
 <!--  ![MixTape](https://github.com/) -->
 
 ## :floppy_disk: Installation Instructions
-1. 
-
-## :stars: Learning Goals
-- 
+1. Clone this client repository to your local machine
+2. Navigate (`cd`) to your local directory containing the server repository
+3. Run `npm install` to install dependencies
+4. Run `npm start` to start the server
+5. On your web browser, navigate to http://localhost:3000/
 
 ## :space_invader: Challenges 
-- 
+- Using raw CSS, will be learning SCSS after this module.
+- Cypress testing had issues with a reusable component being rendered for the favorites page.
+- Receiving html elements as part of the content from the API.
 
 ## :dizzy: Wins
-- 
+- Having a supported API without need for authentication.
+- Being able to refactor components to be reusable, simplifying the rendering of the Job Container used for the home page and favorite page.
+- Very smooth and streamlined build process from design to deployment. :)

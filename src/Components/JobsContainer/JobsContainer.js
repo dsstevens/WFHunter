@@ -5,8 +5,7 @@ import PropTypes from 'prop-types'
 
 
 const JobsContainer = ({ jobs }) => {
-  console.log(jobs, "this is jobs in jobscontainer", jobs[0])
-
+  
   const displayJobsArray = () => {
    return (jobs.map((job) => { 
       return (

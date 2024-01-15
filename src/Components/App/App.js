@@ -1,4 +1,4 @@
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import './App.css';
 import Header from '../Header/Header'
 import HomeButton from '../HomeButton/HomeButton'
@@ -11,8 +11,6 @@ import { useState, useEffect } from 'react';
 
 
 const App = () => {
-  const location = useLocation()
-  const isHomePage = location.pathname === '/'
   const [jobs, setJobs] = useState([])
   const [favorites, setFavorites] = useState([])
  

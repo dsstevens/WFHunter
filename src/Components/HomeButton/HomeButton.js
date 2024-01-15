@@ -1,4 +1,3 @@
-import Home from '../Home/Home'
 import './HomeButton.css'
 import { Link, useLocation } from "react-router-dom"
 

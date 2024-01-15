@@ -19,7 +19,7 @@
 
 
 ## :closed_book: Abstract
-Work From Home Hunter (WFHunter) was designed with a career in mind. Using React, I made an app that utilizes the ![Jobicy API](https://jobicy.com/jobs-rss-feed?utm_source=apislist.com) to deliver the newest posted remote jobs listed on their site. This application utilizes React Router, PropTypes, E2E testing with Cypress and was also designed with accessibility in mind. 
+Work From Home Hunter (WFHunter) was designed with a career in mind. Using React, I made an app that utilizes the [Jobicy API](https://jobicy.com/jobs-rss-feed?utm_source=apislist.com) to deliver the newest posted remote jobs listed on their site. This application utilizes React Router, PropTypes, E2E testing with Cypress and was also designed with accessibility in mind. 
 
 ## :book: Context
  1 week sprint, designed and engineered as a final solo project in mod 4 of Turing.

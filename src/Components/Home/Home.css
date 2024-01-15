@@ -5,13 +5,15 @@ main {
   width: 100%;
   max-width: 100%;
   align-items: center;
+  height: 100vh;
+  overflow-y: hidden;
 }
 
 main::before {
   width: 100vw;
   height: 100vh;
   position: absolute;
-  /* height: calc(100dvh - 231px); */
+  /* height: calc(100vh - px); */
   background-image: url('/Users/deannastevens/Desktop/mod_3/WFHunter/WFHunter/public/shutterstock_1077476951.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,6 +49,7 @@ main::before {
   scrollbar-width: thin; /* For Firefox */
   scrollbar-color: transparent transparent; /* For Firefox */
   text-align: center;
+  margin-bottom: 5%;
 
   &::-webkit-scrollbar {
     width: 12px;
@@ -71,11 +74,21 @@ h3 {
 /* MEDIUM BREAKPOINT */
 @media screen and (min-width: 750px) and (max-width: 1024px) {
 
+  main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    height: 100vh
+  }
+
   main::before {
     width: 100vw;
     height: 100vh;
     position: absolute;
-    /* height: calc(100dvh - 231px); */
+    /* height: calc(100dvh - 200px); */
     background-image: url('/Users/deannastevens/Desktop/mod_3/WFHunter/WFHunter/public/shutterstock_1077476951.jpg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -111,6 +124,7 @@ h3 {
     scrollbar-width: thin; /* For Firefox */
     scrollbar-color: transparent transparent; /* For Firefox */
     text-align: center;
+    margin-bottom: 5%;
 
     &::-webkit-scrollbar {
       width: 12px;

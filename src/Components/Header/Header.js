@@ -4,7 +4,6 @@ import FavesButton from '../FavesButton/FavesButton'
 
 const Header = () => {
 
-
   return (
     <nav>
       <HomeButton></HomeButton>

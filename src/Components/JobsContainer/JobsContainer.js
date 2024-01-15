@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import moment from 'moment'
 import PropTypes from 'prop-types'
 
-
 const JobsContainer = ({ jobs }) => {
   
   const displayJobsArray = () => {
@@ -44,5 +43,4 @@ const JobsContainer = ({ jobs }) => {
   })).isRequired
  };
  
-
  export default JobsContainer

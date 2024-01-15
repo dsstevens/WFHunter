@@ -22,5 +22,14 @@ describe('Home Page', () => {
     }).as('getServerError');
     cy.wait('@getServerError');
   });
-
 });
+
+describe('Should show an error page', () => {
+  it("should show an appropriate error if the page doesn't exist", () => {
+    cy.visit("http://localhost:3000/potato");
+    cy.get(".error-msg").should(
+      "contain",
+      "Oops! An error occurred. Please try again :("
+    );
+  });
+})

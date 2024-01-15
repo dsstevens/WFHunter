@@ -46,7 +46,7 @@ const App = () => {
         <Route path='/' element={<Home jobs={ jobs }/> } />
         <Route path='/favorites' element={<Faves jobs={jobs} favorites={favorites}/>} />
         <Route path='/details/:jobId' element={<JobDetails jobs={ jobs } toggleFavorite={toggleFavorite} favorites={favorites} />} />
-      <Route path='*' element={<ErrorPage />} />
+      <Route path='*' element={<ErrorPage error={{ message:'Oops! An error occurred. Please try again :(' }} />} />
       </Routes>
     </div>
   );
